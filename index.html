@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart City Route Planner - Working Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🚦 Smart City Route Planner - Working Pro</h1>
+
+<div class="controls">
+    <select id="algorithm">
+        <option value="dijkstra">Dijkstra (Traffic Aware)</option>
+        <option value="astar">A* (Fastest)</option>
+    </select>
+
+    <select id="traffic">
+        <option value="1">Normal Road</option>
+        <option value="5">Medium Traffic</option>
+        <option value="10">Heavy Traffic</option>
+        <option value="20">Very Heavy Traffic</option>
+        <option value="wall">Building</option>
+    </select>
+
+    <button onclick="visualize()">Find Route</button>
+    <button onclick="clearBoard()">Clear</button>
+    <button onclick="generateRandom()">Random Maze</button>
+
+    <label>Speed:</label>
+    <input type="range" id="speed" min="1" max="50" value="20">
+</div>
+
+<div class="legend">
+    <span class="weight1">Normal</span>
+    <span class="weight5">Medium</span>
+    <span class="weight10">Heavy</span>
+    <span class="weight20">Very Heavy</span>
+    <span class="wall">Building</span>
+    <span class="start">Start</span>
+    <span class="end">End</span>
+</div>
+
+<div id="stats"></div>
+<div id="grid"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
